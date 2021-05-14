@@ -6,6 +6,6 @@ import com.enterprise.api.entities.Enterprise;
 
 public interface EnterpriseRepository extends JpaRepository<Enterprise, Long> {
 	
-	Enterprise findByCnpj(int cnpj);
+	Enterprise findByCnpj(long cnpj);
 
 }

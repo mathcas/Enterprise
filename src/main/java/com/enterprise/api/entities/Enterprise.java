@@ -21,9 +21,9 @@ public class Enterprise implements Serializable {
 
 	private static final long serialVersionUID = -7231518245688928534L;
 	private Long id;
-	private String razaoSocial;
-	private int cnpj;
-	private String nomeFantasia;
+	private String nome;
+	private long cnpj;
+	private String fantasia;
 	private LocalDate createDate;
 	private LocalDate updateDate;
 
@@ -39,29 +39,29 @@ public class Enterprise implements Serializable {
 
 	@Column(name = "Razao_Social", nullable = false)
 	public String getRazaoSocial() {
-		return razaoSocial;
+		return nome;
 	}
 
 	public void setRazaoSocial(String razaoSocial) {
-		this.razaoSocial = razaoSocial;
+		this.nome = razaoSocial;
 	}
 
 	@Column(name = "CNPJ", nullable = false)
-	public int getCnpj() {
+	public long getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(long cnpj) {
 		this.cnpj = cnpj;
 	}
 
 	@Column(name = "Nome_Fantasia", nullable = true)
 	public String getNomeFantasia() {
-		return nomeFantasia;
+		return fantasia;
 	}
 
 	public void setNomeFantasia(String nomeFantasia) {
-		this.nomeFantasia = nomeFantasia;
+		this.fantasia = nomeFantasia;
 	}
 	
 	@PreUpdate
