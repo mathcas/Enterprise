@@ -18,6 +18,9 @@ public class TakeEnterpriseService {
 		Enterprise enterprise = enterpriseRepository.findByCnpj(cnpj);
 		if (enterprise == null) {
 			enterprise = getEnterpriseFromApiService.getByCnpj(cnpj);
+			if(enterprise != null) {
+				enterpriseRepository.save(enterprise);
+			}
 		}
 		return enterprise;
 	}
